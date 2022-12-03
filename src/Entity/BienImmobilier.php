@@ -70,7 +70,7 @@ class BienImmobilier
         $this->Reservation = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }

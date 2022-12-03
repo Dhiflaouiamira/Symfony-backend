@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reservation{% endblock %}
+
+{% block body %}
+    <h1>Reservation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reservation.id }}</td>
+            </tr>
+            <tr>
+                <th>DateDebut</th>
+                <td>{{ reservation.DateDebut }}</td>
+            </tr>
+            <tr>
+                <th>DateFin</th>
+                <td>{{ reservation.DateFin }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ reservation.Status }}</td>
+            </tr>
+            <tr>
+                <th>Montant</th>
+                <td>{{ reservation.Montant }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_reseravation_index') }}">back to list</a>
+
+    <a href="{{ path('app_reseravation_edit', {'id': reservation.id}) }}">edit</a>
+
+    {{ include('reseravation/_delete_form.html.twig') }}
+{% endblock %}

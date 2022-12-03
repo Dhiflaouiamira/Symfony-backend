@@ -6,6 +6,7 @@ use App\Repository\ClientRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Integer;
 
 /**
  * @ORM\Entity(repositoryClass=ClientRepository::class)
@@ -30,7 +31,7 @@ class Client
     private $prenom;
 
     /**
-     * @ORM\Column(type="int", length=255)
+     * @ORM\Column(type="integer", length=255)
      */
     private $cin;
 
@@ -50,7 +51,7 @@ class Client
     private $email;
 
     /**
-     * @ORM\Column(type="int", length=255)
+     * @ORM\Column(type="integer", length=255)
      */
     private $tel;
 
@@ -70,7 +71,7 @@ class Client
         $this->no = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): ?Integer
     {
         return $this->id;
     }
@@ -147,12 +148,12 @@ class Client
         return $this;
     }
 
-    public function getTel(): ?int
+    public function getTel(): ?Integer
     {
         return $this->tel;
     }
 
-    public function setTel(int $tel): self
+    public function setTel(Integer $tel): self
     {
         $this->tel = $tel;
 

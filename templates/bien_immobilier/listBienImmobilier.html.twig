@@ -1,0 +1,15 @@
+<h1>Liste des BienImmobiler</h1>
+<table border="1">
+    <tr>
+           <td>type</td>
+           <td>nombre des pieces</td>
+           <td>Modele</td>
+    </tr>
+     {% for v in listeBienImmobilier %}
+          <tr>
+                <td>{{  v.typr }}</td>
+                <td>{{ v.nombre des pieces | date }}</td>
+                <td>{{ v.mosel }}</td>
+          </tr>
+      {% endfor %}
+</table>
